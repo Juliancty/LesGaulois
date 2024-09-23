@@ -1,6 +1,7 @@
 package personnages;
 
 import java.util.*;
+import personnages.Gaulois;
 
 public class Druide {
 	private String nom;
@@ -37,6 +38,15 @@ public class Druide {
 		} else {
 			parler("Je n'ai pas trouvé tous les ingrédients, ma potion est "
 					+ "seulement de force " + this.forcePotion);
+		}
+	}
+	
+	public void booster(Gaulois gaulois) {
+		if(gaulois.getNom() == "Obélix") {
+			System.out.println("Non Obélix !... Tu n'auras pas de potion "
+				+ "magique !");
+		} else {
+			gaulois.boirePotion(this.forcePotion);
 		}
 	}
 	

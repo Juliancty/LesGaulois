@@ -35,7 +35,7 @@ public class Gaulois {
 	
 	public void boirePotion(int forcePotion) {
 		this.effetPotion += forcePotion;
-		parler("Merci Druide, je sens que ma force est " + forcePotion + " fois décuplée. ")
+		parler("Merci Druide, je sens que ma force est " + forcePotion + " fois décuplée. ");
 	}
 	
 	public static void main(String[] args) {
@@ -44,6 +44,8 @@ public class Gaulois {
 		asterix.parler("J'ai envie de frapper un romain !)");
 		
 		Romain minus = new Romain("Minus", 5);
+		
+		asterix.boirePotion(5);
 		
 		asterix.frapper(minus);
 	}
